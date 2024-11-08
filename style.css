@@ -1,0 +1,205 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #181818; /* Darker gray background */
+  color: #e0e1dd; /* Light text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 16px;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  transition: background-color 1s ease;
+}
+
+.splash-screen {
+  position: fixed;
+  background-color: #121212; 
+  color: #e0e1dd; 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+  z-index: 10;
+  font-weight: 700; 
+}
+
+.splash-screen h1.splash-title { 
+    font-size: 2.5rem; /* Slightly smaller font size */
+}
+
+
+nav {
+  background-color: #2b374d; /* Updated background color */
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Arrange menu items horizontally */
+  justify-content: center; /* Center the menu items */
+}
+
+nav ul li {
+  margin: 0 20px; /* Spacing between menu items */
+}
+
+nav ul li a {
+  color: #e0e1dd;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  background-color: #2b374d;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #778da9;
+  background-color: #334155; /* Slightly darker blue on hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+
+.section {
+  display: none; /* Hide sections by default */
+  padding: 120px 20px 20px; /* Added padding to the top */
+  text-align: center;
+  /* Remove animations */
+}
+
+.section.active {
+  display: block; /* Show the active section */
+  /* Remove animations */
+}
+
+h1, h2 {
+  color: #778da9;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+a.download-btn {
+  background-color: #415a77; 
+  color: #e0e1dd;
+  padding: 12px 25px;
+  border-radius: 25px; 
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+  font-weight: 600;
+}
+
+a.download-btn:hover {
+  background-color: #778da9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #415a77;
+  border-radius: 25px; 
+  text-decoration: none;
+  color: #e0e1dd;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+}
+
+.links a:hover {
+  background-color: #778da9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.admin-info {
+  margin-top: 20px;
+  color: #778da9;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center; /* Center admin info */
+  font-style: italic; /* Add italic style */
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rules-list {
+  margin-top: 30px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.rules-list h3 {
+  color: #778da9;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.rules-list ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.rules-list p {
+  margin-bottom: 5px;
+}
+
+/* Animations for buttons and links */
+a.download-btn,
+.links a {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+a.download-btn:hover,
+.links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Additional Styling */
+.content p {
+  margin-bottom: 15px;
+}
+
+.rules-content {
+  padding-top: 730px; /* Отступ для правил сверху */
+}
+
+/* Smaller Screen Adjustments */
+@media screen and (max-width: 768px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+  .content {
+    max-width: 90%;
+  }
+  .rules-content {
+    padding-top: 0; /* Убираем отступ на маленьких экранах */
+  }
+}
